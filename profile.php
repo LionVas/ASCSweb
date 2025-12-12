@@ -18,6 +18,11 @@
                 <img src = "images/rab.jpg" alt = "Лого" class = "me-2 rabbit rounded-circle">
                 <span class = "text-light">Леонид Васильев</span>                
             </a>
+            <?php  if(isset($_COOKIE['User'])): ?>
+                <form action="/logout.php" method = "POST" class="d-flex">
+                    <button class = "btn btn-outline-danger" type="submit">Logout</logout>
+                </form>
+            <?php endif;?>
         </div>
    </div>
    <div class = "container mt-5">
@@ -54,3 +59,6 @@
    <script src = "js/script.js"></script>
 </body>
 </html>
+
+
+
