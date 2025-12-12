@@ -15,7 +15,7 @@
                 <h1 class = "mb-4">Login In!</h1>
                 <div class="d-flex justify-content-center gap-3">
                     <a href="registration.php" class = "btn btn-primary">Registration</a>
-                    <a href = "login.html" class = "btn btn-primary">Login</a>
+                    <a href = "login.php" class = "btn btn-primary">Login</a>
                 </div>
 
             </div>

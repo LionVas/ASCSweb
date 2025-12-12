@@ -26,3 +26,32 @@
     </div>
 </body>
 </html>
+
+
+<?php 
+    require_once('db.php');
+    if (isset($_COOKIE['User'])){
+        header("Location: /profile.php");
+        exit();
+    }
+    $link = mysqli_connect('127.0.0.1','root','kali','first');
+    if (isset($_POST['submit'])) {
+    $login = $_POST['login'];
+    $pass  = $_POST['password'];
+
+    if (!$login  || !$pass) {
+        die("input all parameters");
+    }
+
+    $sql = "SELECT * FROM users WHERE username = '$login' AND pass='$pass' ";
+
+    $result = mysqli_query($link,  $sql);
+    if (mysqli__num_rows($result) ==1){
+        setcookie("User", $login, time()+7200);
+        header("Location: /profile.php");
+    } else {
+        echo "incorrect username or password";
+    }
+}
+?>
+
