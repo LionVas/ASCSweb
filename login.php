@@ -14,11 +14,11 @@
             <div class = "col-12 text-center">
                 <h1 class = "mb-4">Login!!!</h1>
                <!-- <button>Steal Miyabi's ears</button> -->
-                <form action="/registration.html" method="POST" class="d-flex flex-column gap-3">
+                <form action="/registration.php" method="POST" class="d-flex flex-column gap-3">
                     <input type="text" name="login" class="form-control-hacker-input" placeholder="login">
                     <input type="password" name="password" class="form-control-hacker-input" placeholder="password">
                     <button class="btn btn-primary" type="submit" name="submit">Login</button>
-                    <p class="mt-3">Dont have an account?<a href="/registration.html">Register</a></p>
+                    <p class="mt-3">Dont have an account?<a href="/registration.php">Register</a></p>
                 </form>
             </div>
         </div>
